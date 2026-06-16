@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      body {
+        margin: 0;
+        width: 340px;
+        background: #0a0a0a;
+        color: #e8e8e8;
+        font: 13px ui-monospace, Menlo, monospace;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 13px;
+        color: #39ff14;
+        margin: 0 0 10px;
+        letter-spacing: .5px;
+      }
+      label {
+        display: block;
+        margin: 10px 0 4px;
+        color: #bdbdbd;
+      }
+      input[type=number],
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        background: #141414;
+        color: #39ff14;
+        border: 1px solid #39ff14;
+        border-radius: 6px;
+        padding: 6px 8px;
+        font: 13px ui-monospace, monospace;
+      }
+      textarea {
+        min-height: 104px;
+        resize: vertical;
+        line-height: 1.35;
+      }
+      .row {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        margin-top: 12px;
+        color: #bdbdbd;
+      }
+      .row input {
+        margin-top: 2px;
+      }
+      .hint {
+        color: #777;
+        font-size: 11px;
+        margin-top: 3px;
+      }
+      .status {
+        color: #39ff14;
+        font-size: 11px;
+        min-height: 14px;
+        margin-top: 10px;
+      }
+      .actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-top: 12px;
+      }
+      button {
+        width: 100%;
+        background: #39ff14;
+        color: #0a0a0a;
+        border: 0;
+        border-radius: 6px;
+        padding: 8px;
+        font-weight: 800;
+        cursor: pointer;
+        font: 13px ui-monospace, monospace;
+      }
+      button.secondary {
+        background: #202020;
+        color: #39ff14;
+        border: 1px solid #39ff14;
+      }
+      pre {
+        display: none;
+        white-space: pre-wrap;
+        word-break: break-word;
+        background: #111;
+        border: 1px solid #333;
+        border-radius: 6px;
+        color: #bdbdbd;
+        margin: 10px 0 0;
+        padding: 8px;
+        font-size: 11px;
+        line-height: 1.35;
+      }
+      pre.visible {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TAR PIT - SETTINGS</h1>
+
+    <label>Claude manual limit (tokens)</label>
+    <input id="ovClaude" type="number" min="0" placeholder="auto (200000)">
+
+    <label>ChatGPT manual limit (tokens)</label>
+    <input id="ovChatgpt" type="number" min="0" placeholder="auto (live / estimated)">
+    <div class="hint">Blank = auto. Filled = manual context-window override.</div>
+
+    <div class="row">
+      <input id="useFallback" type="checkbox" checked>
+      <span>Use estimated fallback when live context is unavailable</span>
+    </div>
+
+    <div class="row">
+      <input id="showDiagnostics" type="checkbox">
+      <span>Show diagnostics on page and in this popup</span>
+    </div>
+
+    <label>Handoff prompt</label>
+    <textarea id="handoffPrompt" spellcheck="false"></textarea>
+    <div class="hint">Blank uses the built-in default. The handoff button inserts this text and never sends it.</div>
+
+    <div class="actions">
+      <button id="save">SAVE</button>
+      <button id="resetPrompt" class="secondary" type="button">RESET PROMPT</button>
+    </div>
+
+    <div class="status" id="saved"></div>
+    <pre id="diag"></pre>
+
+    <script src="defaults.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
