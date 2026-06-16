@@ -67,7 +67,12 @@ Settings save to `chrome.storage.sync` and apply live.
 
 **Context numbers.**
 - Claude (Pro): 200k for all models; a best-effort live scan runs first, 200k is the fallback.
+<img width="771" height="197" alt="ss_5" src="https://github.com/user-attachments/assets/81638cac-c4c0-4e01-ba64-251e2a672532" />
+<img width="767" height="307" alt="ss_4" src="https://github.com/user-attachments/assets/0ae35671-38ea-496d-9219-02f3a9e743ca" />
+
 - ChatGPT: live per-account window when reachable; otherwise the fallback table in `defaults.js` (which carries a `Last reviewed` date).
+<img width="802" height="246" alt="ss_2" src="https://github.com/user-attachments/assets/1b3aaa61-b9cf-47e7-b1a4-c659f731934a" />
+<img width="790" height="137" alt="ss_1" src="https://github.com/user-attachments/assets/240e0c6d-168c-4fa4-a3d7-c51ad270fdca" />
 
 ---
 
@@ -76,6 +81,7 @@ Settings save to `chrome.storage.sync` and apply live.
 - All network calls are **same-origin** to Claude/OpenAI using your existing logged-in session.
 - **No external servers, no API keys, no telemetry.**
 - Diagnostics are kept in memory / the popup and the latest snapshot in `chrome.storage.local`; conversation **content** is never stored or transmitted.
+<img width="342" height="686" alt="ss_3" src="https://github.com/user-attachments/assets/dd5b7d21-fc64-4f99-ad1f-a4c83d9b4eeb" />
 
 ---
 
