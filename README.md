@@ -53,6 +53,8 @@ The bar appears above the composer once a chat has at least one message. As the 
 | Show diagnostics | Reveals the diagnostics line on-page and in the popup. |
 | Handoff prompt | Edit the injected prompt; **Reset Prompt** restores the default. |
 
+<img width="342" height="686" alt="ss_3" src="https://github.com/user-attachments/assets/dd5b7d21-fc64-4f99-ad1f-a4c83d9b4eeb" />
+
 Settings save to `chrome.storage.sync` and apply live.
 
 ---
@@ -81,8 +83,7 @@ Settings save to `chrome.storage.sync` and apply live.
 - All network calls are **same-origin** to Claude/OpenAI using your existing logged-in session.
 - **No external servers, no API keys, no telemetry.**
 - Diagnostics are kept in memory / the popup and the latest snapshot in `chrome.storage.local`; conversation **content** is never stored or transmitted.
-<img width="342" height="686" alt="ss_3" src="https://github.com/user-attachments/assets/dd5b7d21-fc64-4f99-ad1f-a4c83d9b4eeb" />
-
+  
 ---
 
 ## Limitations & tradeoffs
