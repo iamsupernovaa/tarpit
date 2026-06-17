@@ -119,4 +119,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Manual testing steps live in [TESTING.md
 
 ## License
 
-MIT — see `LICENSE`. (Add a `LICENSE` file if one isn't present yet.)
+MIT — see `LICENSE`.
