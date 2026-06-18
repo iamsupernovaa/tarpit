@@ -25,7 +25,7 @@
   ];
 
   window.TarPitDefaults = Object.freeze({
-    VERSION: "3.6.4",
+    VERSION: "3.6.7",
     DEFAULT_PROMPT,
     OPENAI_CTX,
     CACHE_TTL_MS: 5 * 60 * 1000,

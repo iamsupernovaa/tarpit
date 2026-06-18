@@ -1,11 +1,11 @@
-// Tar Pit v3.6.4 - context meter for Claude + ChatGPT
+// v3.6.7 - context meter for Claude + ChatGPT
 (() => {
   "use strict";
   if (window.__TARPIT_V3__) return;
   window.__TARPIT_V3__ = true;
 
   const D = window.TarPitDefaults || {};
-  const VERSION = D.VERSION || "3.6.4";
+  const VERSION = D.VERSION || "3.6.7";
   const DEFAULT_PROMPT = D.DEFAULT_PROMPT || "";
   const CACHE_TTL_MS = D.CACHE_TTL_MS || 5 * 60 * 1000;
   const CACHE_VERSION = D.CACHE_VERSION || 2;
